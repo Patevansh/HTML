@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+<body>
+    <textarea name="text" id="doinput" placeholder="Enter Text"></textarea>
+    <button>Add Event</button>
+    <ol></ol>
+    <script>
+        const ta=document.getElementById("doinput");
+        const bt=document.querySelector("button");
+        const ol=document.querySelector("ol");
+        
+        bt.onclick = ()=>{
+            const node = document.createElement("li");
+            const textnode = document.createTextNode(ta.value);
+            node.appendChild(textnode);
+            ol.appendChild(node);
+            ta.value="";
+        }
+    </script>
+</body>
+</html>
